@@ -1,0 +1,157 @@
+\ProvidesPackage{mypresentationstyle}
+%%
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+%%
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+%%
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+%%
+\usepackage{xspace}
+%%%%
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
+%%
+\usepackage{fix-cm}%TO AVOID WARNINGS WITH FONTS
+\usepackage{amscd,amssymb,amsmath}
+\usepackage{dsfont}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{colortbl}
+%%
+%\usepackage{epsfig}
+%\usepackage{pstricks,mathrsfs}
+%\usepackage{ifthen}
+%\usepackage[bindingoffset=0cm,centering,includeheadfoot,margin=2cm,headheight=33pt]{geometry}
+%\usepackage{hyperref}
+%\hypersetup{colorlinks=true}
+%\usepackage[table]{xcolor}
+%\usepackage{ctable}
+
+\usepackage[final]{pdfpages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\usepackage{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{eurosym} %à mettre impérativement pour pouvoir manipuler des \euro{}
+\usepackage{multirow} %permet d'obtenir de regrouper plusieurs lignes dans un tableau
+\makeatother
+
+%\usepackage{natbib}
+\usepackage{bibunits}
+\usepackage{fancyhdr}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\graphicspath{{../images/}{./images/}}
+
+\definecolor{tetecolonne}{rgb}{0.4,0.0,0.0}
+
+\definecolor{objgeo}{rgb}{0.8,0.0,0.2}
+\definecolor{relobj}{rgb}{0,0.8,0}
+\definecolor{propobj}{rgb}{0,0.0,0.8}
+
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+
+\renewcommand{\seriesdefault}{mc}%Narrow?
+\setlength{\parindent}{0cm} % Default is 15pt.
+
+
+%%BEAMER
+
+\RequirePackage{tikz}
+\usetikzlibrary{arrows, decorations.markings}
+\usetikzlibrary{shapes.geometric}% for trapezium shape
+%\usetikzlibrary{timeline}
+\usepackage{animate}
+\lstset{language=C++,
+  basicstyle=\tiny,
+  frame=single,
+  captionpos=b,
+  linewidth=1.02\linewidth,
+  commentstyle=\color{green},
+  stringstyle=\color{red},
+  identifierstyle=\ttfamily,
+  keywordstyle=\color{blue},
+  texcl=true
+%  breaklines=true
+}
+\newcommand{\patternscale}{.3}
+\newcommand{\patternspace}{1mm}
+\newcommand{\startdate}{2001}
+
+\definecolor{agray}{HTML}{414141}
+\definecolor{ablue}{HTML}{00adee}
+\definecolor{anorange}{HTML}{e47d1a}
+\definecolor{agreen}{HTML}{93c119}
+\definecolor{anotherblue}{HTML}{00516F}
+\definecolor{verylightgray}{gray}{0.9}
+\definecolor{ared}{HTML}{e8231b}
+\definecolor{abrown}{HTML}{8e4e10}
+\definecolor{tetecolonne}{rgb}{0.4,0.0,0.0}
+\definecolor{objgeo}{rgb}{0.8,0.0,0.2}
+\definecolor{relobj}{rgb}{0,0.8,0}
+\definecolor{propobj}{rgb}{0,0.0,0.8}
+\hypersetup{colorlinks=true,linkcolor=,urlcolor=anorange}
+\hypersetup{citecolor=anotherblue}
+
+\let\oldcite=\cite
+\renewcommand{\cite}[1]{\textcolor{anotherblue}{\oldcite{#1}}}
+\newcommand{\mycite}[1]{\textcolor{agreen}{\oldcite{#1}}}
+
+\graphicspath{{../habilitation/images/}{../habilitation/images_benoit/}{../habilitation/images_bertrand/}{../habilitation/images_mickael/}{../habilitation/images_remi/}{images/}{../habilitation/images_geohistoricaldata/}}
+
+\setbeamerfont{subtitle}{size=\scriptsize}
+
+\makeatletter
+\newcommand\addsectiontotoc[1]{%
+  \addtocontents{toc}{%
+    \protect\beamer@sectionintoc{\the\c@section}{#1}{\the\c@page}{\the\c@part}%
+                                {\the\beamer@tocsectionnumber}}
+}
+\makeatother
+
+\makeatletter
+\newcommand{\miniscule}{\@setfontsize\miniscule{4}{5}}% \tiny: 5/6
+\makeatother
+
+\usepackage{textpos}
+\setbeamerfont*{section in head/foot}{size=\miniscule}
+\setbeamercolor{section in head/foot}{parent=palette primary}
+
+\tikzstyle{job}=[thick,rounded corners=2pt,draw=none,fill=ablue]
+\tikzstyle{resp}=[thick,rounded corners=2pt,draw=none,fill=anorange]
+\tikzstyle{phd}=[thick,rounded corners=2pt,draw=none,fill=agreen]
+\tikzstyle{postdoc}=[thick,rounded corners=2pt,draw=none,fill=anotherblue]
+\tikzstyle{stage}=[thick,rounded corners=2pt,draw=none,fill=abrown]
+\tikzstyle{projet}=[thick,rounded corners=2pt,draw=none,fill=gray]
+\tikzstyle{domaine}=[thick,rounded corners=2pt,draw=none,fill=agray,opacity=0.5]
+\tikzstyle{conf}=[thick,rounded corners=2pt,draw=none,fill=agreen,text=agreen]
+\tikzstyle{cours}=[thick,rounded corners=2pt,draw=none,fill=agreen]
+
+\tikzstyle{place}=[circle,draw=none,fill=black,thick]
+\tikzstyle{vecArrow} = [thick, decoration={markings,mark=at position
+    1 with {\arrow[semithick]{open triangle 60}}},
+  double distance=1.4pt, shorten >= 5.5pt,
+  preaction = {decorate},
+  postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+\tikzstyle{innerWhite} = [semithick, white,line width=1.4pt, shorten >= 4.5pt]
+
+\usepackage{enumitem}
+\setlist[description]{%
+  topsep=-2.5pt,               % space before start / after end of list
+  itemsep=-2.5pt,               % space between items
+  font={\bfseries\sffamily}, % set the label font
+%  font={\bfseries\sffamily\color{red}}, % if colour is needed
+}
+
+\let\oldurl=\url
+\renewcommand{\url}[1]{\href{#1}{\textbf{#1}}}

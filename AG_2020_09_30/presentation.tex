@@ -1,0 +1,83 @@
+\documentclass[frenchb,10pt]{beamer}
+\usepackage{../mypresentationstyle}
+\graphicspath{{../images/}}
+\newcommand{\thetitle}{Assemblée Générale\\Projet ANR SoDUCo\\(Social Dynamics in Urban Context)}
+\title{\thetitle}
+\subtitle{Open tools, models, and data - Paris and its suburbs, 1789-1950}
+
+\author{\vspace{4cm}}
+
+\date{30 septembre 2020}
+\hypersetup{
+  pdftitle={Projet ANR SoDUCo (Social Dynamics in Urban Context) - Presentation ANR - 2018},
+  pdfsubject={\thetitle},
+  pdfkeywords={Sciences ouvertes, interdisciplinarité, sciences de l'information géographique, sciences humaines et sociales, systèmes complexes et modèles de simulation},
+  pdfproducer={Latex with hyperref},
+  pdfcreator={pdflatex},
+  pdfauthor= {Julien Perret},
+  colorlinks
+}
+
+\titlegraphic{
+  \vspace{3.2cm}
+  \centering
+  \includegraphics[height=0.12\textwidth]{logo_ign}
+  \includegraphics[height=0.12\textwidth]{logo_ehess}
+  \includegraphics[height=0.12\textwidth]{logo_epita}
+  \includegraphics[height=0.12\textwidth]{logo_an}\\
+  \includegraphics[height=0.24\textwidth]{logo_soduco}
+}
+ 
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Ordre du jour}
+  \hypertarget{odj}{}
+  \begin{description}[align=left,labelwidth=1.5cm]
+  \item[14h00] Vectorisation semi-automatique des plans - \emph{Yizi Chen}
+  \item[14h30] Inventaire des sources (annuaires, etc.) - \emph{Pascal Cristofoli}
+  \item[15h00] Analyse automatique des annuaires - \emph{Edwin Carlinet}
+  \item[15h30] Traitement des données issues de l'analyse des annuaires - \emph{}?
+  \item[16h00] Validation des adresses - \emph{Charly Bernard}
+  \item[16h30] Point sur les différents outils, dépots, données, site web - \emph{Julien Perret}
+  \item[17h00] Discussion Générale
+  \item[17h30] Fin de la journée
+  \end{description}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Projet ANR SoDUCo (Social Dynamics in Urban Context)}
+%  Open tools, models, and data - Paris and its suburbs, 1789-1950\\
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics[width = 0.68\textwidth]{schema}
+      \caption{Les tâches du projet SoDUCo}
+      \label{fig:soduco}
+    \end{center}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}[standout]
+
+  Merci de votre attention !
+  
+\end{frame}
+
+\appendix
+
+\begin{frame}[allowframebreaks]{Références}
+  \hypertarget{references}{}
+  \setbeamerfont{bibliography item}{size=\tiny}
+  \setbeamerfont{bibliography entry author}{size=\tiny}
+  \setbeamerfont{bibliography entry title}{size=\tiny}
+  \setbeamerfont{bibliography entry location}{size=\tiny}
+  \setbeamerfont{bibliography entry note}{size=\tiny}
+  \bibliographystyle{amsalpha}
+  \bibliography{presentation}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,505 @@
+\documentclass[frenchb,10pt]{beamer}
+\usepackage{../mypresentationstyle}
+\graphicspath{{../images/}}
+\newcommand{\thetitle}{Projet ANR SoDUCo\\(Social Dynamics in Urban Context)}
+\title{\thetitle}
+\subtitle{Open tools, models, and data - Paris and its suburbs, 1789-1950}
+
+\author{\vspace{2.4cm}\textbf{Julien Perret}}
+\institute{
+  \tiny
+  Institut National de l'Information Géographique et Forestière (IGN),\\
+  Laboratoire des Sciences et Technologies de l'Information Géographique (LaSTIG)\\
+  ~\\
+  \'Ecole des Hautes \'Etudes en Sciences Sociales (EHESS), \\
+  Centre de Recherches Historiques (CRH), 
+  Laboratoire de Démographie Historique et Sociale (LaDéHiS)
+}
+\date{6 décembre 2018}
+\hypersetup{
+  pdftitle={Projet ANR SoDUCo (Social Dynamics in Urban Context) - Presentation ANR - 2018},
+  pdfsubject={\thetitle},
+  pdfkeywords={Sciences ouvertes, interdisciplinarité, sciences de l'information géographique, sciences humaines et sociales, systèmes complexes et modèles de simulation},
+  pdfproducer={Latex with hyperref},
+  pdfcreator={pdflatex},
+  pdfauthor= {Julien Perret},
+  colorlinks
+}
+
+%\titlegraphic{\vspace{2.2cm}\centering\includegraphics[trim=1450 0 0 0,clip,width=0.75\textwidth]{couverture}}
+\titlegraphic{
+  \vspace{3.2cm}
+  \centering
+  \includegraphics[height=0.12\textwidth]{logo_ign}
+  \includegraphics[height=0.12\textwidth]{logo_ehess}
+  \includegraphics[height=0.12\textwidth]{logo_epita}
+  \includegraphics[height=0.12\textwidth]{logo_an}
+}
+
+%% \date{7 décembre 2016}
+%\titlegraphic{\vspace{6cm}\hfill\includegraphics[width=1cm]{logo_ign}}
+%% \titlegraphic{
+%%   \vspace{7.4cm}
+%%   \includegraphics[height=0.8cm]{logo_paris-est.png}
+%%   \hfill
+%%   \includegraphics[width=1.2cm]{logo_ign}
+%%   \hspace{1cm}
+%%   \includegraphics[height=1.2cm]{logo_cogit.png}
+%% }
+
+%\titlegraphic{\vspace{6cm}\hfill\includegraphics[width=2cm]{logo_cnrs.png}}
+ 
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+  \frametitle{Projet ANR SoDUCo (Social Dynamics in Urban Context)}
+  \hypertarget{projet}{}
+  \begin{minipage}{\textwidth}
+    \begin{exampleblock}{Partenaires}
+      \vspace{1em}
+      \small
+      \begin{itemize}
+      \item \alert{IGN/LaSTIG/Strudel} (Julien Perret)~: Sciences de l'\textbf{information géographique}
+      \item \alert{EHESS} (Stéphane Baciocchi)
+        \begin{itemize}
+          \item \alert{CRH/LaDéHiS}~: \textbf{Histoire sociale}
+          \item \alert{CAMS}~: \textbf{Systèmes complexes, physique statistique}
+        \end{itemize}
+      \item \alert{EPITA/LRDE} (Thierry Géraud)~: \textbf{Informatique, traitement d'images}
+      \item \alert{Archives Nationales/Centre de topographie Parisienne} (Valentine Weiss)~: \textbf{Histoire}
+      \end{itemize}
+    \end{exampleblock}
+    
+    \begin{exampleblock}{Objectifs}
+      \begin{itemize}
+    \item \alert{Approche globale} pour l'analyse des évolutions
+    \item \alert{Analyse critique} des \alert{sources primaires}
+      %  \item respect des sources primaires
+      %% \begin{itemize}
+      %% \item \alert{Traces géo-historiques}
+      %% \end{itemize}
+    \item \alert{Co-construction} des données géo-historiques
+      %% \begin{itemize}
+      %% \item \alert{Approche collaborative}
+      %% \end{itemize}
+    \item \alert{Paris et sa banlieue} de 1789 à 1950
+    \end{itemize}
+    \end{exampleblock}
+  \end{minipage}
+  %% \begin{minipage}{0.345\textwidth}
+  %%   \begin{flushright}
+  %%     \includegraphics[width=0.25\textwidth]{logo_ign}
+  %%     \includegraphics[width=0.25\textwidth]{logo_ehess}\\
+  %%     \includegraphics[width=0.5\textwidth]{logo_epita}\\
+  %%     \includegraphics[width=0.5\textwidth]{logo_an}
+  %%   \end{flushright}
+  %% \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Projet ANR SoDUCo (Social Dynamics in Urban Context)}
+%  Open tools, models, and data - Paris and its suburbs, 1789-1950\\
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics[width = 0.68\textwidth]{schema}
+      \caption{Les tâches du projet SoDUCo}
+      \label{fig:soduco}
+    \end{center}
+  \end{figure}
+\end{frame}
+
+%% \begin{frame}
+%%   \frametitle{Conclusion}
+%%   \begin{itemize}
+%%   \item Contributions à une meilleure représentation numérique
+%%     \begin{itemize}
+%%     \item du territoire
+%%     \item de ses évolutions
+%%     \end{itemize}
+%%   \item Connaissance/Compréhension des \alert{sources primaires}
+%%   \item Questionnement entre les \alert{échelles} $\to$ couplage
+%%   \item Visualisation / \alert{Interaction} avec les données
+%%       \end{itemize}
+%% \end{frame}
+
+%% \begin{frame}
+%%   \frametitle{Conclusion}
+%%   \begin{itemize}
+%%   \item \alert{Interdisciplinarité}
+%%   \item \alert{Reproductibilité}
+%%   \item \alert{Sciences citoyennes}
+%%   \end{itemize}
+%% \end{frame}
+
+%% \begin{frame}
+%%   \frametitle{Perspectives}
+%%   \begin{itemize}
+%%   \item Gestion des \alert{sources primaires} et de leurs méta-données
+%%   %% \item Explicitation des <<connaissances tacites>>
+%%   \item \alert{Extraction de contenu semi-automatique} et gestion des données
+%%   \item \alert{Construction semi-automatique de données spatio-temporelles}
+%%     \begin{itemize}
+%%     \item multi-échelle
+%%     \item distribuées et versionnées% (git, ipfs, geogig)
+%%     \item croisées
+%%     \end{itemize}
+%%   \end{itemize}
+%% \end{frame}
+
+%% \begin{frame}
+%%   \frametitle{Perspectives}
+%%   \begin{itemize}
+%%   \item \alert{Simulation multi-échelle} de phénomènes complexes
+%%     \begin{itemize}
+%%     \item[] \textbf{Couplage de modèles}
+%%     \end{itemize}
+%%   \item \alert{Modélisation procédurale inverse}
+%%   \item Analyse de \alert{sensibilité, calibration, exploration} distribuées de modèles
+%%     \begin{itemize}
+%%     \item[] \textbf{OpenMole}
+%%     \end{itemize}
+%%     %  \item Rapport entre simulation et génération (procédurale)
+%%   \item \alert{Interaction} avec les données et les dynamiques
+%%   \end{itemize}
+%% \end{frame}
+
+%% \begin{frame}
+%%   \frametitle{Recherche reproductible}
+%%   \begin{itemize}
+%%   \item Un article scientifique doit être accompagné
+%%     \begin{itemize}
+%%     \item des \alert{données} sur lesquelles il s'appuie
+%%     \item du \alert{code} utilisé
+%%     \end{itemize}
+%%   \item ``An article about computational science in a scientific
+%%     publication is \textit{not} the scholarship itself, it is merely \textit{advertising}
+%%     of the scholarship. The actual scholarship is the complete
+%%     software development environment and the complete set of
+%%     instructions which generated the figures.'' \alert{D. Donoho}
+%% %  \item ``Talk is cheap. Show me the code.'' Linus Torvalds
+%%   \end{itemize}
+%% \end{frame}
+%http://dosen.narotama.ac.id/wp-content/uploads/2014/12/Digital-Scholarship-in-Scientific-Research-Open-Questions-in-Reproducibility-and-Curation.pdf
+
+%% \begin{frame}
+%%   \frametitle{Recherche reproductible}
+%%   \begin{itemize}
+%%   \item Fondement de la \alert{méthode scientifique}
+%%   \item Catalyseur pour la recherche scientifique
+%%     \begin{itemize}
+%%     \item facilite la reprise des travaux
+%%     \item accélère le progrès
+%%     \item accélère la détection d'erreur
+%%     \end{itemize}
+%%   \item Garde-fou
+%%   \item Expliciter la \alert{<<connaissance tacite>>}
+%% %  \item Article+Code+Données
+%%   \end{itemize}
+%% \end{frame}
+%% %http://www.irisa.fr/metiss/gribonval/Talks/2014/Reproductibilite.pdf
+
+\begin{frame}
+  \frametitle{Projet ANR SoDUCo~: Sources primaires}
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[trim = 0 480 0 0, clip, width=0.24\textwidth]{map1.jpg}
+    \includegraphics[trim = 0 500 0 0, clip, width=0.24\textwidth]{map4.jpg}
+    \includegraphics[trim = 0 510 0 0, clip, width=0.24\textwidth]{map5.jpg}
+    \includegraphics[trim = 0 490 0 0, clip, width=0.24\textwidth]{map6.jpg}
+    \includegraphics[trim = 0 100 0 0, clip, width=0.485\textwidth]{almanac1.jpg}
+    \includegraphics[trim = 0 80 0 0, clip, width=0.485\textwidth]{almanac2.jpg}
+%    \vspace{.5em}
+    \caption{Exemples de sources primaires.}
+    \label{images}
+  \end{figure}
+
+  \begin{itemize}
+  \item \alert{Identification des sources pertinentes}
+    \begin{itemize}
+    \item Sources cartographiques
+    \item Annuaires professionnels
+    \end{itemize}
+  \item \alert{Numérisation} des sources
+  \item \alert{Qualification} des sources et construction de \alert{méta-données}
+    \begin{itemize}
+    \item Contenu des sources
+    \item Imperfections associées \\(incertitudes, imprécisions, lacunes, hétérogénéités)
+    \end{itemize}    
+  \item \alert{Publication} en ligne en (linked) \alert{Open Data}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Projet ANR SoDUCo~: Données géo-historiques}
+  \begin{minipage}{0.595\textwidth}
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.45\textwidth]{observatoire}
+    \includegraphics[width=0.45\textwidth]{observatoire_filaire}
+    \caption{Une source et la vectorisation des rues.}
+    \label{fig:observatoire}
+  \end{figure}
+  \end{minipage}
+  \begin{minipage}{0.395\textwidth}
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{matches}
+    \caption{Noms et adresses extraites d'annuaires de Paris.}
+    \label{fig:matches}
+  \end{figure}
+  \end{minipage}
+
+  \begin{itemize}
+  \item \alert{Sources cartographiques}
+    \begin{itemize}
+    \item Géo-référencement semi-automatique
+    \item Extraction semi-automatique de données topographiques
+    \end{itemize}
+  \item \alert{Annuaires}
+    \begin{itemize}
+    \item Extraction semi-automatique de la structure des documents
+    \item Extraction semi-automatique des contenus
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Projet ANR SoDUCo~: Données géo-historiques}
+  Un travail fait en collaboration avec le projet PSL \alert{Belle \'Epoque} (PSE, Dauphine, EHESS, EPITA, IGN)
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.75\textwidth]{graphical_abstract}
+    \caption{Le processus de géocodage~\cite{Cura2018}.}
+    \label{fig:geocoding}
+  \end{figure}
+
+  \begin{minipage}{0.395\textwidth}
+  \begin{itemize}
+  \item \alert{Géocodage} des adresses
+  \item \alert{Validation, correction et\\ enrichissement collaboratifs}
+  \end{itemize}
+  \end{minipage}
+  \begin{minipage}{0.595\textwidth}
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{result_all_dataset_combined}
+    \caption{Résultats de géocodage~\cite{Cura2018}.}
+    \label{fig:geocoding_results}
+  \end{figure}
+  \end{minipage}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Projet ANR SoDUCo~: Analyse de co-évolution}
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.25\textwidth]{benoit_map1}~
+    \includegraphics[width=0.25\textwidth]{benoit_map2}\\
+    \includegraphics[width=0.25\textwidth]{benoit_map1_1}~
+    \includegraphics[width=0.25\textwidth]{benoit_map2_2}
+    \caption{Indicateur de centralité intermédiaire calculé pour les snapshots issus des plans de Verniquet et d'Alphand-Poubelle~\cite{Costes2016PhD}.}
+    \label{fig:analyse}
+  \end{figure}
+  \begin{itemize}
+  \item \alert{Définition des phénomènes d'intérêt}
+    %% \begin{itemize}
+    %% \item \'Evolution spatio-temporelle des activités
+    %% \item Gentrification et appauvrissement
+    %% \end{itemize}
+  \item \alert{Analyse des dynamiques de co-évolution}
+  \item \alert{Géovisualisation et cartographie dynamiques}
+    %% \begin{itemize}
+    %% \item \'Evolution spatio-temporelle des activités
+    %% \item \'Evolution spatio-temporelle de la morphologie
+    %% \item Analyse de motifs et tendances
+    %% \end{itemize}
+%  \item \alert{Apport de l'approche collaborative}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Projet ANR SoDUCo~: Objectifs}
+  \hypertarget{projet}{}
+  \begin{itemize}
+  \item Identification et diffusion des \alert{sources primaires}
+    %% \begin{itemize}
+    %% \item Incertitudes
+    %% \item Méta-données
+    %% \end{itemize}
+    %% \item Explicitation des <<connaissances tacites>>
+    %  \item \alert{Extraction de contenu semi-automatique} et gestion des données
+  \item \alert{Construction semi-automatique} de données géo-historiques
+  \item \alert{Saisie, correction, enrichissement et validation} des données
+    %% \begin{itemize}
+    %% \item Multi-échelle
+    %% \item Distribuées et versionnées% (git, ipfs, geogig)
+    %% \item Croisées
+    %% \end{itemize}
+  \item \'Etude de la \alert{co-évolution} des structures spatiales et des pratiques sociales
+  \end{itemize}
+  \textbf{Plateforme \alert{ouverte} collaborative}
+  \begin{itemize}
+  \item \textbf{permettant la \alert{tra\c{c}abilité} des processus et des données}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[standout]
+
+  Merci de votre attention !
+  
+\end{frame}
+
+\appendix
+
+\begin{frame}{Production Scientifique et recherche reproductible}
+  \hypertarget{production}{}
+  \nocite{Dumenieu2013a,Dumenieu2013b,Perret2016,Cura2018,Dumenieu2018,Costes2015a,barthelemy2011spatial,barthelemy2013self,gribaudi2014paris,lazzara2011scribo,lazzara2014planting}
+  \begin{minipage}{0.59\textwidth}
+    \begin{exampleblock}{Production Scientifique}
+      \scriptsize
+      \begin{description}[align=right,labelwidth=3cm]
+      \item[Articles de \alert{revues}]
+      \item[\alert{Conférences} internationales]
+      \item[\alert{Conférences} nationales]
+      \item[\alert{Communications} sans acte]
+      \item[Articles de \alert{vulgarisation}]
+      \end{description}
+          {%\tiny
+            ~\\~\\
+      \textbf{La marche des sciences} sur \textbf{France Culture}~:\\
+      \href{http://www.franceculture.fr/emission-la-marche-des-sciences-ce-que-les-cartes-de-cassini-disent-de-la-france-d-aujourd-hui-2015-}{``Ce que les cartes de Cassini disent de la France d'aujourd'hui ?''}\\
+      \textbf{Rue89}~:\\
+      \href{https://www.nouvelobs.com/rue89/rue89-nos-vies-connectees/20151021.RUE1024/voyage-dans-la-france-du-xviiie-siecle-la-tete-dans-les-cartes-de-cassini.html}{``Voyage dans la France du XVIIIe siècle, la tête dans les cartes de Cassini''}
+      }
+    \end{exampleblock}
+  \end{minipage}
+  \begin{minipage}{0.4\textwidth}
+    \tiny
+    %      \begin{block}{Modélisation urbaine}
+    %        \url{https://github.com/Remi-C/PPPP_utilities}\\
+    %        différentes fonctions utilisées dans la thèse\\autour de PostgreSQL, PostGIS, PostGIS Topology et PointCloud\\
+    %        \url{https://github.com/Remi-C/Network_snapping}\\
+    %        recalage automatique du réseau sur les observations
+    %      \end{block}     
+    \begin{exampleblock}{Logiciels}
+    
+    {\scriptsize\textbf{Évolutions territoriales}}\\
+      \url{http://geohistoricaldata.org}\\
+      Site du projet, visualisation et téléchargement des données\\
+      \url{https://github.com/GeoHistoricaldata}\\
+      Codes associés au projet
+    
+    {\scriptsize\textbf{Projets transversaux}}\\
+      \url{https://github.com/IGNF/librjmcmc}\\
+      \url{https://github.com/IGNF/librjmcmc4j}\\
+      \url{https://github.com/IGNF/librjmcmc4s}\\
+      Optimisation stochastique avec RJMCMC en C++, java et scala\\
+      \url{https://github.com/IGNF/evidence4j}\\
+      Moteur pour Dempster-Shafer basé sur \emph{EvidenZ}\\
+      \url{https://github.com/IGNF/geoxygene}\\
+      Système d'Information Géographique\\
+      \url{https://github.com/openmole}\\
+      Exploration et distribution de modèles\\
+    \end{exampleblock}
+  \end{minipage}
+\end{frame}
+
+%% \begin{frame}{Ressources}
+%% \tiny
+%%   \begin{block}{Modélisation urbaine}
+%%     \url{https://github.com/Remi-C/PPPP_utilities}\\
+%%     différentes fonctions utilisées dans la thèse autour de PostgreSQL, PostGIS, PostGIS Topology et PointCloud\\
+%%     \url{https://github.com/Remi-C/Network_snapping}\\
+%%     recalage automatique du réseau sur les observations
+%%   \end{block}
+
+%%   \begin{block}{Simulation urbaine}
+%%     \url{https://github.com/IGNF/simplu3D-rules}\\
+%%     Gestion des règles d'urbanisme\\
+%%     \url{https://github.com/IGNF/simplu3D}\\
+%%     Simulateur de configurations bâties respectant les règles d'urbanisme\\
+%%     \url{https://github.com/IGNF/simplu3D-openmole}\\
+%%     Workflow OpenMole pour la distribution et l'exploration
+%%   \end{block}
+  
+%%   \begin{block}{Données géohistoriques}
+%%     \url{http://geohistoricaldata.org}\\
+%%     site du projet, visualisation et téléchargement des données\\
+%%     \url{https://github.com/GeoHistoricaldata}\\
+%%     code associés au projet
+%%   \end{block}
+
+%%   \begin{block}{Projets communs}
+%%     \url{https://github.com/IGNF/librjmcmc}\\
+%%     \url{https://github.com/IGNF/librjmcmc4j}\\
+%%     \url{https://github.com/IGNF/librjmcmc4s}\\
+%%     Optimisation stochastique avec RJMCMC en C++, java et scala\\
+%%     \url{https://github.com/IGNF/evidence4j}\\
+%%     Moteur pour Dempster-Shafer basé sur \emph{EvidenZ}\\
+%%     \url{https://github.com/IGNF/geoxygene}\\
+%%     Système d'Information Géographique\\
+%%   \end{block}
+%% \end{frame}
+
+%% \begin{frame}{Ressources}
+%%   \href{http://dosen.narotama.ac.id/wp-content/uploads/2014/12/Digital-Scholarship-in-Scientific-Research-Open-Questions-in-Reproducibility-and-Curation.pdf}{Digital scholarship in Scientific Research}\\
+%%   \href{http://www.irisa.fr/metiss/gribonval/Talks/2014/Reproductibilite.pdf}{Recherche reproductible à l'INRIA}
+%% \end{frame}
+
+%% \begin{frame}{Imperfections}
+%%   \only<1>{
+%%     \begin{figure}[htb]
+%%       \centering
+%%       \includegraphics[width=\textwidth]{taxonomie1}
+%%       \caption{Taxonomie des imperfections des données~\cite{deRunz2008}.}
+%%       \label{fig:taxonomie}
+%%     \end{figure}
+%%   }
+%%   \only<2>{
+%%     \begin{figure}[htb]
+%%         \centering
+%%         \includegraphics[width=0.9\textwidth]{taxonomie2}
+%%         \caption{Formalisation mathématique des imperfections des données~\cite{deRunz2008}.}
+%%         \label{fig:formulation}
+%%     \end{figure}
+%%   }
+%% \end{frame}
+
+%% \begin{frame}
+%%   \frametitle{Imperfections des données géographiques}
+%%   \hypertarget{imperfections}{}
+%%   \begin{minipage}{0.495\textwidth}
+%%   \begin{figure}[htb]
+%%     \centering
+%%     \includegraphics[width=\textwidth]{taxonomie1}
+%%     \caption{\footnotesize Taxonomie des imperfections des données archéologiques~\cite{deRunz2008}.}
+%%     \label{fig:taxonomie}
+%%   \end{figure}
+%%   \end{minipage}
+%%   \begin{minipage}{0.495\textwidth}
+%%   \begin{figure}[htb]
+%%     \centering
+%%     \includegraphics[width=\textwidth]{formalisation}
+%%     \caption{\footnotesize Formalisation mathématique des imperfections des données archéologiques~\cite{deRunz2008}.}
+%%     \label{fig:formalisation}
+%%   \end{figure}
+%%   \end{minipage}
+%% \end{frame}
+
+\begin{frame}[allowframebreaks]{Références}
+  \hypertarget{references}{}
+  \setbeamerfont{bibliography item}{size=\tiny}
+  \setbeamerfont{bibliography entry author}{size=\tiny}
+  \setbeamerfont{bibliography entry title}{size=\tiny}
+  \setbeamerfont{bibliography entry location}{size=\tiny}
+  \setbeamerfont{bibliography entry note}{size=\tiny}
+  \bibliographystyle{amsalpha}
+  \bibliography{presentation}
+\end{frame}
+
+\end{document}
