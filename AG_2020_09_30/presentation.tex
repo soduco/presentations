@@ -21,10 +21,11 @@
 \titlegraphic{
   \vspace{3.2cm}
   \centering
-  \includegraphics[height=0.12\textwidth]{logo_ign}
-  \includegraphics[height=0.12\textwidth]{logo_ehess}
-  \includegraphics[height=0.12\textwidth]{logo_epita}
-  \includegraphics[height=0.12\textwidth]{logo_an}\\
+  \includegraphics[height=0.05\textwidth]{logo_ign}\hfill
+  \includegraphics[height=0.05\textwidth]{logo_ehess}\hfill
+  \includegraphics[height=0.05\textwidth]{logo_epita}\hfill
+  \includegraphics[height=0.05\textwidth]{logo_an}\hfill
+  \includegraphics[height=0.025\textwidth]{logo_lnc}\\
   \includegraphics[height=0.24\textwidth]{logo_soduco}
 }
  
@@ -35,13 +36,14 @@
 \begin{frame}
   \frametitle{Ordre du jour}
   \hypertarget{odj}{}
-  \begin{description}[align=left,labelwidth=1.5cm]
+  \begin{description}[align=left,labelwidth=1cm]
   \item[14h00] Vectorisation semi-automatique des plans - \emph{Yizi Chen}
   \item[14h30] Inventaire des sources (annuaires, etc.) - \emph{Pascal Cristofoli}
   \item[15h00] Analyse automatique des annuaires - \emph{Edwin Carlinet}
-  \item[15h30] Traitement des données issues de l'analyse des annuaires - \emph{}?
+  \item[15h30] Traitement des données des annuaires - \emph{Pascal Cristofoli \& Julien Perret}
+    \item[Pause café]
   \item[16h00] Validation des adresses - \emph{Charly Bernard}
-  \item[16h30] Point sur les différents outils, dépots, données, site web - \emph{Julien Perret}
+  \item[16h30] Point sur les différents outils, données, site web - \emph{Julien Perret}
   \item[17h00] Discussion Générale
   \item[17h30] Fin de la journée
   \end{description}
@@ -50,6 +52,33 @@
 
 \begin{frame}
   \frametitle{Traitement des données issues de l'analyse des annuaires}
+  \begin{exampleblock}{directory-analysis}
+    un premier outil de traitement des données extraites des annuaires\\
+    \url{https://github.com/soduco/directory-analysis}\\
+    \begin{itemize}
+    \item[-] conversion des fichiers json en csv
+    \item[-] conversion des fichiers json dans le format d'entrée du géocodeur historique
+    \item[-] conversion des résultats du géocodeur historique (json) en geojson
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement des données issues de l'analyse des annuaires}
+  \includegraphics[width=\textwidth]{pylene_2020_09} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement des données issues de l'analyse des annuaires}
+  \includegraphics[width=\textwidth]{noms-0084}\\
+  Les adresses de la page 84 du Didot 1851.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement des données issues de l'analyse des annuaires}
+    \begin{itemize}
+    \item[-] Il reste à automatiser le passage par le géocodeur historique
+    \end{itemize}  
 \end{frame}
 
 \begin{frame}
