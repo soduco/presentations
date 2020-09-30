@@ -101,7 +101,9 @@
   \frametitle{Traitement des données issues de l'analyse des annuaires}
     \begin{itemize}
     \item[-] Il reste à automatiser le passage par le géocodeur historique
-    \end{itemize}  
+    \item[-] On pourrait fusionner les entités à cheval entre 2 pages
+    \item[-] Il faudrait rendre le géocodeur moins sensible au bruit  
+    \end{itemize}
 \end{frame}
 
 \begin{frame}[standout]
@@ -114,7 +116,10 @@
 \begin{frame}
   \frametitle{Point sur les différents outils, dépots, données, site web\\\hspace{5cm}\small Outils}
   \begin{description}[align=left,labelwidth=3.5cm]
-  \item[Historical Geocoder] géocodage historique\\\hfill\url{https://github.com/GeoHistoricalData/geocoder-front}
+  \item[Historical Geocoder] géocodage historique\\
+    \hfill\url{https://github.com/GeoHistoricalData/geohistorical\_objects}\\
+    \hfill\url{https://github.com/GeoHistoricalData/historical\_geocoding}\\
+    \hfill\url{https://github.com/GeoHistoricalData/geocoder-front}
   \item[gallipy] accès simplifié à l'API Gallica\\\hfill\url{https://github.com/GeoHistoricalData/gallipy}
   \item[Georeferencer] outil en ligne de géoréférencement\\\hfill\url{https://github.com/GeoHistoricalData/georeferencer}
   \item[AutoMatch] mise en correspondance image\\\hfill\url{https://github.com/GeoHistoricalData/automatch}
@@ -136,6 +141,33 @@
 
 \begin{frame}
   \frametitle{Traitement des données issues de l'analyse des annuaires}
+  \textbf{AutoMatch} est un outil de mise en correspondance d'images
+  \begin{itemize}
+  \item[-] entre 1 image géoréférencée et un ensemble d'images à géoréférencer
+  \item[-] identifie des points homologues (SIFT, SURF, ORB, AKAZE, BRISK)
+  \item[-] calcule une transformation (homographie / RANSAC, polynomiale/hermert)
+  \item[-] exporte les points et les images géoréférencées
+  \end{itemize}
+  \includegraphics[width=.6\textwidth]{automatch_poubelle_parcellaire}\\
+  Un résultat entre l'Atlas du service du plan de 1888 et le Plan parcellaire municipal de Paris de la fin du XIXe
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement des données issues de l'analyse des annuaires}
+  \textbf{AutoMatch} permet ou pourrait permettre de
+  \begin{itemize}
+  \item[-] assurer la traçabilité du processus de géoréférencement
+  \item[-] re-géoréférencer des nouveaux scans
+  \item[-] dé-géoréférencer des plans et reconstuire un atlas géoréférencé
+  \item[-] mettre en correspondance des plans successifs (Atlas du service du plan)
+  \item[-] géoréférencer à partir de sources multiples
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Traitement des données issues de l'analyse des annuaires}
+  \textbf{nm} est une bibliothèque qui vise à donner un accès facilité à différents algorithmes d'appariement, notamment \emph{HMMSpatialNetworkMatcher}~\cite{Costes2019} et \emph{Opt}~\cite{li2011optimisation}.\\
+  
   \includegraphics[width=.45\textwidth]{result_quali_6}\includegraphics[width=.45\textwidth]{result_quali_7}\\
   Résultats de l'appariement de réseaux avec HMMSpatialNetworkMatcher~\cite{Costes2019}.
 \end{frame}
@@ -143,17 +175,22 @@
 \begin{frame}
   \frametitle{Point sur les différents outils, dépots, données, site web\\\hspace{5cm}\small Données}
   \begin{description}[align=left,labelwidth=3.5cm]
-  \item[Plan-parcellaire-municipal-de-Paris-fin-XIXe] \url{https://github.com/soduco/Plan-parcellaire-municipal-de-Paris-fin-XIXe}
-  \item[Atlas-de-Verniquet] \url{https://github.com/soduco/Atlas-de-Verniquet}
-  \item[Atlas-de-Jacoubet] \url{https://github.com/soduco/Atlas-de-Jacoubet}
-  \item[Service-du-Plan-Paris] \url{https://github.com/soduco/Service-du-Plan-Paris-1888}
+  \item[Plan-parcellaire-municipal-de-Paris-fin-XIXe] Images ``source'' (scans)\\
+    \hfill\url{https://github.com/soduco/Plan-parcellaire-municipal-de-Paris-fin-XIXe}
+  \item[Atlas-de-Verniquet] Images ``source'' (scans), points de contrôle, masques\\
+    \hfill\url{https://github.com/soduco/Atlas-de-Verniquet}
+  \item[Atlas-de-Jacoubet] Nouvelles images ``source'' (scans), fichiers géoréférencés\\
+    \hfill\url{https://github.com/soduco/Atlas-de-Jacoubet}
+  \item[Service-du-Plan-Paris] Images ``source'' (scans), fichiers géoréférencés pour 1888\\
+    \hfill\url{https://github.com/soduco/Service-du-Plan-Paris-1888}
   \item[Annuaires] FTP
-  \item[Bases de données vecteur] PostGIS 
+  \item[Données vecteur] PostGIS
   \end{description}
 \end{frame}
 
 \begin{frame}
   \frametitle{Point sur les différents outils, dépots, données, site web\\\hspace{5cm}\small Site web}
+  \includegraphics[width=\textwidth]{website}\\
   \begin{description}[align=left,labelwidth=3.5cm]
   \item[Site web SoDUCo] \url{https://github.com/soduco/soduco.github.io} $\to$ \url{https://soduco.github.io/}
   \end{description}
