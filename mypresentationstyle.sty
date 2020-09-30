@@ -1,6 +1,8 @@
 \ProvidesPackage{mypresentationstyle}
 %%
 \usetheme[progressbar=frametitle]{metropolis}
+\usepackage{xcolor}
+
 \usepackage{appendixnumberbeamer}
 %%
 \usepackage{booktabs}
@@ -155,3 +157,112 @@
 
 \let\oldurl=\url
 \renewcommand{\url}[1]{\href{#1}{\textbf{#1}}}
+
+% commandes venant du document de soumission
+\newcommand{\soduco}{\emph{SoDUCo}\xspace}
+\newcommand{\geoportail}{\emph{G\'eoportail}}
+\newcommand{\gallica}{\emph{Gallica}}
+
+\newcommand{\ehess}{\emph{EHESS}\xspace}
+\newcommand{\lastig}{\emph{Laboratoire en Sciences et Technologies de l'Information G\'eographique}\xspace}
+\newcommand{\cogit}{\emph{COGIT}\xspace}
+\newcommand{\ign}{\emph{IGN}\xspace}
+\newcommand{\an}{\emph{National Archives}\xspace}
+\newcommand{\natar}{\emph{Nat. Ar.}\xspace}
+\newcommand{\ladehis}{\emph{LaD\'eHiS}\xspace}
+\newcommand{\ghdb}{\emph{GeoHistoricalData}\xspace}
+\newcommand{\cea}{\emph{CEA}\xspace}
+\newcommand{\ipht}{\emph{IPhT}\xspace}
+\newcommand{\epita}{\emph{EPITA}\xspace}
+\newcommand{\lrde}{\emph{LRDE}\xspace}
+\newcommand{\scribo}{\emph{SCRIBO}\xspace}
+\newcommand{\bnf}{\emph{BnF}\xspace}
+\newcommand{\osm}{\emph{OpenStreetMap}\xspace}
+\newcommand{\nypl}{\emph{NYPL}\xspace}
+\newcommand{\buildinginspector}{\emph{Building-Inspector}\xspace}
+\newcommand{\arpenteur}{\emph{Arpenteur Topographe}\xspace}
+\newcommand{\belleepoque}{\emph{BELLEPOQUE}\xspace}
+
+\newcommand{\geopeuple}{\emph{G\'eoPeuple}\xspace}
+\newcommand{\alpage}{\emph{Alpage}\xspace}
+\newcommand{\cams}{\emph{CAMS}\xspace}
+\newcommand{\sixteenth}{$16^{th}$\xspace}
+\newcommand{\seventeenth}{$17^{th}$\xspace}
+\newcommand{\eighteenth}{$18^{th}$\xspace}
+\newcommand{\nineteenth}{$19^{th}$\xspace}
+\newcommand{\twentieth}{$20^{th}$\xspace}
+\newcommand{\opensource}{\emph{open source}\xspace}
+\newcommand{\opendata}{\emph{open data}\xspace}
+\newcommand{\software}{\color{blue}{Software}}
+\newcommand{\dataset}{\color{BrickRed}{Dataset}}
+
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\eg}{\emph{e.g.}}
+
+\colorlet{tableheadcolor}{gray!25} % Table header colour = 25% gray
+\newcommand{\headcol}{\rowcolor{tableheadcolor}} %
+\colorlet{tablerowcolor}{gray!10} % Table row separator colour = 10% gray
+\newcommand{\rowcol}{\rowcolor{tablerowcolor}} %
+% Command \topline consists of a (slightly modified) \toprule followed by a \heavyrule rule of colour tableheadcolor (hence, 2 separate rules)
+\newcommand{\topline}{\arrayrulecolor{black}\specialrule{0.1em}{\abovetopsep}{0pt}%
+  \arrayrulecolor{tableheadcolor}\specialrule{\belowrulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}}
+% Command \midline consists of 3 rules (top colour tableheadcolor, middle colour black, bottom colour white)
+\newcommand{\midline}{\arrayrulecolor{tableheadcolor}\specialrule{\aboverulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}\specialrule{\lightrulewidth}{0pt}{0pt}%
+  \arrayrulecolor{white}\specialrule{\belowrulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}}
+% Command \rowmidlinecw consists of 3 rules (top colour tablerowcolor, middle colour black, bottom colour white)
+\newcommand{\rowmidlinecw}{\arrayrulecolor{tablerowcolor}\specialrule{\aboverulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}\specialrule{\lightrulewidth}{0pt}{0pt}%
+  \arrayrulecolor{white}\specialrule{\belowrulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}}
+% Command \rowmidlinewc consists of 2 rules (top colour tablerowcolor, middle colour white)  
+\newcommand{\rowmidlinetw}{\arrayrulecolor{tablerowcolor}\specialrule{\aboverulesep}{0pt}{0pt}%
+  \arrayrulecolor{tablerowcolor}\specialrule{\lightrulewidth}{0pt}{0pt}%
+  \arrayrulecolor{white}\specialrule{\belowrulesep}{0pt}{0pt}}
+  
+% Command \rowmidlinewc consists of 3 rules (top colour white, middle colour black, bottom colour tablerowcolor)
+\newcommand{\rowmidlinewc}{\arrayrulecolor{white}\specialrule{\aboverulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}\specialrule{\lightrulewidth}{0pt}{0pt}%
+  \arrayrulecolor{tablerowcolor}\specialrule{\belowrulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}}
+% Command \rowmidlinew consists of 1 white rule
+\newcommand{\rowmidlinew}{\arrayrulecolor{white}\specialrule{\aboverulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}}
+% Command \rowmidlinec consists of 1 tablerowcolor rule
+\newcommand{\rowmidlinec}{\arrayrulecolor{tablerowcolor}\specialrule{\aboverulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}}
+% Command \bottomline consists of 2 rules (top colour
+\newcommand{\bottomline}{\arrayrulecolor{white}\specialrule{\aboverulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}\specialrule{\heavyrulewidth}{0pt}{\belowbottomsep}}%
+\newcommand{\bottomlinec}{\arrayrulecolor{tablerowcolor}\specialrule{\aboverulesep}{0pt}{0pt}%
+  \arrayrulecolor{black}\specialrule{\heavyrulewidth}{0pt}{\belowbottomsep}}%
+
+\newcommand{\bottomcol}{\rowcolor{black}} %
+
+%Macros for formatting participants names
+\newcommand{\leader}[1]{{\flushright \bf \emph{\color{blue}Task Leader: \underline{#1}}\\}}
+\newcommand{\participants}[2]{{\flushright \bf \emph{\color{blue}Participants: \underline{#1}, #2}\\}}
+\newcommand{\participant}[1]{{\flushright \bf \emph{\color{blue}Participants: \underline{#1}}\\}}
+\newcommand{\moveup}{\vspace*{-1em}}
+\newcommand{\moveuphalf}{\vspace*{-0.5em}}
+
+%\newcommand{\yes}{{\color{BrickRed}{\bf yes}}}
+\newcommand{\yes}{{\color{RoyalBlue}{$\scalebox{0.7}{\CIRCLE}$}}}
+\newcommand{\no}{{\color{RoyalBlue}{$\scalebox{0.7}{\Circle}$}}}
+\newcommand{\partially}{{\color{RoyalBlue}{$\scalebox{0.7}{\LEFTcircle}$}}}
+
+%Progress bar
+\newcommand{\progress}{{\color{RoyalBlue}{$\square\square\square\square$}}}
+\newcommand{\progresss}{{\color{RoyalBlue}{$\blacksquare\square\square\square$}}}
+\newcommand{\progressss}{{\color{RoyalBlue}{$\blacksquare\blacksquare\square\square$}}}
+\newcommand{\progresssss}{{\color{RoyalBlue}{$\blacksquare\blacksquare\blacksquare\square$}}}
+\newcommand{\progressssss}{{\color{RoyalBlue}{$\blacksquare\blacksquare\blacksquare\blacksquare$}}}
+
+%white text
+\newcommand{\wt}[1]{\color{white}\textbf{#1}} %
+\newcommand{\bign}{{\color{blue}{\bf \ign}}\xspace}
+\newcommand{\behess}{{\color{blue}{\bf \ehess}}\xspace}
+\newcommand{\bepita}{{\color{blue}{\bf \epita}}\xspace}
+\newcommand{\ban}{{\color{blue}{\bf \natar}}\xspace}
